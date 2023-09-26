@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="letter.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+    <title>Hi, Danielli</title>
+</head>
+
+<body>
+<style>
+    .container {
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+ .container1 {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000000;
+}
+
+.glowing-text {
+	color: #fff;
+	font-size: 3rem;
+	position: relative;
+	text-align: center;
+	padding: 20px;
+	border: 5px solid #fff;
+	box-shadow: 0 0 10px #fff;
+	animation: none;
+    animation-name: move-text;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes move-text {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.glowing-text::after {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	bottom: -5px;
+	right: -5px;
+	border: 5px solid #fff;
+	box-shadow: 0 0 20px #fff;
+	opacity: 0;
+	z-index: -1;
+	transition: opacity 0.3s;
+}
+
+.glowing-text:hover {
+	color: #333;
+	box-shadow: none;
+}
+
+.glowing-text:hover::after {
+	opacity: 1;
+}
+
+</style>
+
+    <div class="container">
+        <label>
+        <div class="heart">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg"></img>
+        </div>
+        
+        <input id="messageState" type="checkbox" style="display:none"/>
+        </label>
+        <div class="message">
+            <h1 class="glowing-text">Happy Sabbath Day Anniversary!!</h1>
+            <p>Dear Danielli, <br>
+
+                I hope this message finds you well. I wanted to take a moment to wish you a happy birthday and let you know how much I appreciate you. Even though we may not know each other very well, I wanted to let you know that you have caught my attention and I have been thinking about you a lot lately.
+                Your birthday is a special occasion, and I hope that this year brings you much happiness, success, and love. As someone who has been admiring you from afar, I wanted to take this opportunity to express my feelings for you. You are a truly special person, and I find myself drawn to your kind heart, your intelligence, and your sense of humor.
+                I know that I am a shy person, and I may not have the courage to express my feelings in person, but I wanted you to know that I am thinking of you on your special day. I hope that this birthday is just the beginning of a year filled with joy and wonderful experiences.
+                Once again, happy birthday, and I hope that our paths cross again soon. Ingatan at Samahan ka nawang palagi at Advance Happy Pasalamat <33! <br><br>
+                With all my love, <br>
+                –jm</p>
+        </div>
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>
